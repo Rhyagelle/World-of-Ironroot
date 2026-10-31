@@ -1,10 +1,10 @@
 # ─────────────────────────────────────────────────────────────
-#  Hollowmere: a Jekyll theme for Vintage Story server sites
+#  Ironroot: a Jekyll theme for my Vintage Story server site
 #  Edit this file first. Everything below is placeholder content.
 # ─────────────────────────────────────────────────────────────
 
 title: World of Ironroot
-tagline: A survival server in the ash-grey reaches, where storms rewrite the land and the settlement holds on.
+tagline: The world has forgotten you in its ancient years. You were once many, now you are the few. As one of the few survivors of the Convergence, you set out to reclaim your right to exist.
 description: Lore, mods, map and rules for the Ironroot Vintage Story server.
 lang: en
 
@@ -21,7 +21,7 @@ server:
   address: play.example.com:42420
   version: "1.21.x"
   mode: Survival
-  whitelist: Apply on Discord
+  whitelist: Apply on Discord (soon)
   discord: https://discord.gg/your-invite
   # Paste the address of your hosted web map to embed it on the Map page.
   # Leave empty to show setup instructions instead.
