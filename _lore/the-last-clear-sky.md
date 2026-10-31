@@ -1,20 +1,11 @@
 ---
-title: The last clear sky
+title: The Ancient world of Ironroot
 order: 1
-summary: Before the storms, the reaches were farmland, quiet roads and long summers.
+summary: How the world collapsed beneath the Convergence.
 ---
 
-Nobody in Hollowmere remembers the exact day the sky stopped being reliable. What survives are the records of the years before: grain ledgers, tax rolls, a few love letters pressed between pages of them. The reaches were farmland then, a patchwork of low walls and orchards that ran from the marsh to the foothills.
+The World of Ironroot is ancient in its years. It has seen the rise and fall of mankind many times, and it is always the last standing. The planet is a harsh environment to survive in, but once you have conquered it, it rewards you with abundance. With all great things, come greater risks, however.
 
-## The reaches before
+The world is plagued by storms the races of Ironroot have taken to calling the “Convergence Storms”; violent storms that bridge the dimensional gap between Ironroot and that of a twisted, dark dimension. The enemy comes and goes with these storms, fading in and out of reality as if smoke themselves. For thousands of years, the races of Ironroot battled with these reoccurring storms and set up settlements across the planet. However, in 1123 of the year of Life, came a storm so devastating that none could escape its fury. It tore across the planet, reshaping significant parts of the world and filling the air with corruption. 
 
-The old road ran straight from the quarry at Ashfall to the river crossing. Carts used it in daylight and nobody locked a door. The settlements that stood along it were small and prosperous, and the largest of them was a market town whose name has since been scraped from every stone.
-
-> We counted the harvest and never once counted the sky.
-{: .callout}
-
-## What the ledgers leave out
-
-The last ledgers show the strange parts of the final season only as gaps: a field left unharvested, a shipment that never arrived, a clerk's note that the weather had *turned wrong*. Then the entries stop.
-
-Archaeologists, if the survivors had any, would call it an orderly collapse. The people who lived through it called it the quiet.
+Although they did not know if their desperate act would bring them to salvation or into darkness itself, the races of Ironroot fled through a Convergence Storm that seemed unlike any before.
