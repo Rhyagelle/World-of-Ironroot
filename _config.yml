@@ -19,7 +19,7 @@ google_fonts: true
 # Shown in the connect plate on the home page, the footer and the Join page.
 server:
   address: play.example.com:42420
-  version: "1.21.x"
+  version: "1.22.7"
   mode: Survival
   whitelist: Apply on Discord (soon)
   discord: https://discord.gg/your-invite
