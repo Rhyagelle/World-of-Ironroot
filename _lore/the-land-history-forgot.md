@@ -1,7 +1,7 @@
 ---
 title: The Land History Forgot
 order: 2
-summary: 
+summary: The way of the world.
 ---
 
 The land of Ironroot endured despite the catastrophe, and began to flourish in ways it hadn't since mankind climbed the ladders from primitive civilizations. Remnants of the
