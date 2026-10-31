@@ -6,33 +6,12 @@
 #   description: what players will find there
 #   danger:      true to flag the place as hazardous
 
-- name: Hollowmere Hall
+- name: Bright Hope
   type: Settlements
-  coords: "0, 120, 0"
+  coords: "0, 0, 0"
   description: The founding hall and the server's central meeting point. Spawn runs start here.
 
-- name: Lantern Row
+- name: Hollowbark Grove
   type: Settlements
-  coords: "-340, 118, 205"
-  description: A market street where players trade. Look for stalls with lit lanterns.
-
-- name: Tin Vein Ridge
-  type: Resources
-  coords: "812, 164, -460"
-  description: A long ridge with surface tin, a good first trip once you have a copper pickaxe.
-
-- name: Ashfall Quarry
-  type: Resources
-  coords: "-1210, 96, 540"
-  description: Open-cast stone and clay beds, shared by everyone. Take what you need and leave the walls standing.
-
-- name: The Cracked Spire
-  type: Landmarks
-  coords: "1530, 210, 1180"
-  description: A ruined tower that attracts temporal storms. Strong gear recommended.
-  danger: true
-
-- name: The Drowned Road
-  type: Landmarks
-  coords: "-60, 109, -900"
-  description: A paved route that disappears into the marsh. It leads to Tin Vein Ridge if you stay on the stones.
+  coords: "0, 0, 0"
+  description: A smaller outpost a small distance from spawn hub.
