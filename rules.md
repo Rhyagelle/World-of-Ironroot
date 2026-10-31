@@ -17,4 +17,3 @@ lede: Short and simple. They apply to everyone, including admins.
 {: .rules}
 
 > Breaking a rule once by accident is a conversation. Breaking it on purpose is a ban. Just please be decent.
-{: .callout}
