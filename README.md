@@ -1,8 +1,6 @@
-# Hollowmere
+# Ironroot
 
 A Jekyll theme for a Vintage Story server website. It has pages for lore, mods, the map, rules, news and a join guide. It builds on GitHub Pages with no custom plugins and no build step beyond Jekyll itself.
-
-All text, mods and places are **sample content**. Replace them with your own.
 
 ## Put it online
 
