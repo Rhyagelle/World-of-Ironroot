@@ -1,21 +1,6 @@
 # Ironroot
 
-A Jekyll theme for a Vintage Story server website. It has pages for lore, mods, the map, rules, news and a join guide. It builds on GitHub Pages with no custom plugins and no build step beyond Jekyll itself.
-
-## Put it online
-
-1. Create a GitHub repository and copy everything in this folder into it.
-2. In the repository go to **Settings, Pages**, choose **Deploy from a branch**, then pick `main` and `/ (root)`.
-3. Edit `_config.yml`. If your site address is `https://USER.github.io/REPO`, set `baseurl: "/REPO"`. For a user site or a custom domain, leave `baseurl` empty.
-
-## Preview on your computer
-
-```bash
-bundle install
-bundle exec jekyll serve
-```
-
-Then open http://localhost:4000.
+This is the official website page for the Vintage Story server "The World of Ironroot".
 
 ## What to edit
 
