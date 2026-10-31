@@ -3,7 +3,7 @@
 #  Edit this file first. Everything below is placeholder content.
 # ─────────────────────────────────────────────────────────────
 
-title: Hollowmere
+title: World of Ironroot
 tagline: A survival server in the ash-grey reaches, where storms rewrite the land and the settlement holds on.
 description: Lore, mods, map and rules for the Hollowmere Vintage Story server.
 lang: en
@@ -11,7 +11,7 @@ lang: en
 # For a project site at https://USER.github.io/REPO set baseurl to "/REPO".
 # For a user site (USER.github.io) or a custom domain, leave baseurl empty.
 url: ""
-baseurl: ""
+baseurl: "/World-of-Ironroot"
 
 # Set to false to skip loading web fonts (the theme falls back to system serifs).
 google_fonts: true
