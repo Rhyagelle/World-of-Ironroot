@@ -1,0 +1,47 @@
+---
+layout: default
+title: Map
+summary: The live server map and a guide to notable places.
+---
+{% assign groups = site.data.locations | group_by: "type" %}
+
+<div class="page container">
+  <header class="page__head">
+    <h1>Map</h1>
+    <p class="lede">See where everyone has built, then pick a destination from the list below.</p>
+  </header>
+
+  {% if site.server.map_url != "" %}
+    <div class="map-frame">
+      <iframe src="{{ site.server.map_url }}" title="Live server map" loading="lazy"></iframe>
+    </div>
+    <p><a href="{{ site.server.map_url }}" rel="noopener">Open the map in its own tab</a> for a larger view.</p>
+  {% else %}
+    <div class="notice">
+      <p><strong>The live map isn't connected yet.</strong></p>
+      <p>Host your server's web map, then set <code>server.map_url</code> in <code>_config.yml</code> to its address. It will appear here automatically.</p>
+    </div>
+  {% endif %}
+
+  <div class="section" style="padding-bottom:0">
+    {% for group in groups %}
+    <h2 class="section__title">{{ group.name }}</h2>
+    <ul class="entry-list" style="margin-bottom:3rem">
+      {% for place in group.items %}
+      <li class="entry">
+        <div>
+          <h3 class="entry__title">{{ place.name }}</h3>
+          <p class="entry__desc">{{ place.description }}</p>
+        </div>
+        <p class="entry__meta">
+          {% if place.danger %}<span class="tag tag--warn">Dangerous</span>{% endif %}
+          <button class="coords" type="button" data-copy="{{ place.coords }}" aria-label="Copy coordinates for {{ place.name }}">
+            <span>{{ place.coords }}</span><span class="copy-label">Copy</span>
+          </button>
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+</div>

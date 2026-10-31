@@ -1,0 +1,22 @@
+{% assign chapters = site.lore | sort: "order" %}
+{% assign idx = 0 %}
+{% for c in chapters %}{% if c.url == page.url %}{% assign idx = forloop.index0 %}{% endif %}{% endfor %}
+{% assign prev = nil %}
+{% if idx > 0 %}{% assign prev_i = idx | minus: 1 %}{% assign prev = chapters[prev_i] %}{% endif %}
+{% assign next_i = idx | plus: 1 %}
+{% assign next = chapters[next_i] %}
+
+<nav class="pager" aria-label="Chapter navigation">
+  {% if prev %}
+    <a class="pager__link pager__link--prev" href="{{ prev.url | relative_url }}" rel="prev">
+      <span class="pager__dir">Previous chapter</span>
+      <span class="pager__title">{{ prev.title }}</span>
+    </a>
+  {% else %}<span></span>{% endif %}
+  {% if next %}
+    <a class="pager__link pager__link--next" href="{{ next.url | relative_url }}" rel="next">
+      <span class="pager__dir">Next chapter</span>
+      <span class="pager__title">{{ next.title }}</span>
+    </a>
+  {% endif %}
+</nav>

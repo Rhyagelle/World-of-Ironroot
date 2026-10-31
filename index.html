@@ -1,0 +1,80 @@
+---
+layout: default
+title: Home
+intro: |
+  Hollowmere is a long-running Vintage Story survival server. The land is cold, resources are scattered and the temporal storms never stay away for long. Players work together to rebuild a settlement from clay pots and copper tools up to something that can survive the next storm.
+
+  New players are welcome. Read the lore for the setting, check which mods you need, then add the server address and say hello on Discord.
+start:
+  - title: Read the lore
+    url: /lore/
+    text: How the storms started, who the Wardens are and why the settlement was built here.
+  - title: Check the mod list
+    url: /mods/
+    text: Which mods you must install to join, and which ones are optional extras.
+  - title: Find your way around
+    url: /map/
+    text: The live map and a list of settlements, resource sites and dangerous places.
+  - title: Join the server
+    url: /join/
+    text: Step-by-step setup, from installing the game to your first login.
+---
+
+<section class="hero">
+  <div class="container hero__grid">
+    <div>
+      <h1>{{ site.title }}</h1>
+      <p class="hero__lede">{{ site.tagline }}</p>
+      <div class="btn-row">
+        <a class="btn" href="{{ '/join/' | relative_url }}">How to join</a>
+        <a class="btn btn--ghost" href="{{ '/lore/' | relative_url }}">Read the lore</a>
+      </div>
+    </div>
+    {% include connect-card.html %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section__title">About the server</h2>
+    <div class="prose">
+      {{ page.intro | markdownify }}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section__title">Where to start</h2>
+    <ul class="entry-list">
+      {% for item in page.start %}
+      <li class="entry">
+        <div>
+          <h3 class="entry__title"><a class="entry__link" href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+          <p class="entry__desc">{{ item.text }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% assign latest = site.posts | slice: 0, 3 %}
+{% if latest.size > 0 %}
+<section class="section">
+  <div class="container">
+    <h2 class="section__title">Latest news</h2>
+    <ul class="entry-list">
+      {% for post in latest %}
+      <li class="entry">
+        <div>
+          <h3 class="entry__title"><a class="entry__link" href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p class="entry__desc">{{ post.excerpt | strip_html | strip_newlines | truncate: 150 }}</p>
+        </div>
+        <time class="entry__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}

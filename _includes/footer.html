@@ -1,0 +1,23 @@
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <p class="site-footer__brand">{% include mark.html %} {{ site.title }}</p>
+      <p class="site-footer__note">{{ site.tagline }}</p>
+    </div>
+
+    <div>
+      <h2 class="site-footer__heading">Find us</h2>
+      <ul class="site-footer__list">
+        <li>Server address: <code>{{ site.server.address }}</code></li>
+        <li>Game version: {{ site.server.version }}</li>
+        {% if site.server.discord != "" %}<li><a href="{{ site.server.discord }}" rel="noopener">Discord</a></li>{% endif %}
+        <li><a href="{{ '/feed.xml' | relative_url }}">News feed</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="site-footer__heading">About this site</h2>
+      <p class="site-footer__note">{{ site.title }} is a fan-run community server. It is not affiliated with Anego Systems, the developer of <a href="https://www.vintagestory.at/" rel="noopener">Vintage Story</a>.</p>
+    </div>
+  </div>
+</footer>

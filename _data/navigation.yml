@@ -1,0 +1,15 @@
+# Primary navigation. Order here is the order in the header.
+# Mark one entry with `cta: true` to style it as a button.
+- title: Lore
+  url: /lore/
+- title: Mods
+  url: /mods/
+- title: Map
+  url: /map/
+- title: Rules
+  url: /rules/
+- title: News
+  url: /news/
+- title: Join
+  url: /join/
+  cta: true

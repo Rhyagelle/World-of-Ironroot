@@ -1,0 +1,52 @@
+---
+layout: default
+title: Mods
+summary: Every mod running on the server, and which ones you need to install to join.
+---
+{% assign mods = site.data.mods %}
+{% assign categories = mods | map: "category" | uniq | sort %}
+{% assign required_mods = mods | where: "required", true %}
+
+<div class="page container">
+  <header class="page__head">
+    <h1>Mods</h1>
+    <p class="lede">You need {{ required_mods.size }} of these to join. The rest are optional, or run on the server only.</p>
+  </header>
+
+  <div class="filters" data-mod-filters>
+    <label class="sr-only" for="mod-search">Search mods</label>
+    <input id="mod-search" type="search" placeholder="Search by name or description" autocomplete="off" data-mod-search>
+    <div class="chips" role="group" aria-label="Filter by category">
+      <button class="chip" type="button" aria-pressed="true" data-cat="all">All</button>
+      {% for c in categories %}
+      <button class="chip" type="button" aria-pressed="false" data-cat="{{ c | slugify }}">{{ c }}</button>
+      {% endfor %}
+    </div>
+    <p class="filters__count" aria-live="polite" data-mod-count></p>
+  </div>
+
+  {% for c in categories %}
+  {% assign group = mods | where: "category", c %}
+  <section class="mod-group" data-group>
+    <h2>{{ c }}</h2>
+    <ul class="entry-list">
+      {% for m in group %}
+      <li class="entry" data-mod data-cat="{{ c | slugify }}" data-search="{{ m.name | append: ' ' | append: m.description | downcase | escape }}">
+        <div>
+          <h3 class="entry__title">
+            {% if m.url %}<a class="entry__link" href="{{ m.url }}" rel="noopener">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}
+          </h3>
+          <p class="entry__desc">{{ m.description }}</p>
+        </div>
+        <p class="entry__meta">
+          {% if m.required %}<span class="tag tag--warn">Required</span>{% else %}<span class="tag">Optional</span>{% endif %}
+          <span class="tag">{{ m.side | default: "Both" }}</span>
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+
+  <p class="empty" data-mod-empty hidden>No mods match. Clear the search or choose another category.</p>
+</div>

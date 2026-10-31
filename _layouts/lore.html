@@ -1,0 +1,32 @@
+---
+layout: default
+---
+{% assign chapters = site.lore | sort: "order" %}
+<div class="container lore-layout">
+  <aside class="lore-side">
+    <details class="lore-nav" open data-lore-nav>
+      <summary>Chapters</summary>
+      <ol>
+        {% for c in chapters %}
+          <li><a href="{{ c.url | relative_url }}"{% if c.url == page.url %} aria-current="page"{% endif %}>{{ c.title }}</a></li>
+        {% endfor %}
+      </ol>
+    </details>
+
+    <nav class="toc" aria-label="On this page" data-toc hidden>
+      <p class="toc__title">On this page</p>
+      <ul></ul>
+    </nav>
+  </aside>
+
+  <article class="lore-article">
+    <header class="page__head">
+      <h1>{{ page.title }}</h1>
+      {% if page.summary %}<p class="lede">{{ page.summary }}</p>{% endif %}
+    </header>
+    <div class="prose prose--lore" data-toc-source>
+      {{ content }}
+    </div>
+    {% include lore-pager.html %}
+  </article>
+</div>

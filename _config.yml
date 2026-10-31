@@ -1,0 +1,66 @@
+# ─────────────────────────────────────────────────────────────
+#  Hollowmere: a Jekyll theme for Vintage Story server sites
+#  Edit this file first. Everything below is placeholder content.
+# ─────────────────────────────────────────────────────────────
+
+title: Hollowmere
+tagline: A survival server in the ash-grey reaches, where storms rewrite the land and the settlement holds on.
+description: Lore, mods, map and rules for the Hollowmere Vintage Story server.
+lang: en
+
+# For a project site at https://USER.github.io/REPO set baseurl to "/REPO".
+# For a user site (USER.github.io) or a custom domain, leave baseurl empty.
+url: ""
+baseurl: ""
+
+# Set to false to skip loading web fonts (the theme falls back to system serifs).
+google_fonts: true
+
+# Shown in the connect plate on the home page, the footer and the Join page.
+server:
+  address: play.example.com:42420
+  version: "1.21.x"
+  mode: Survival
+  whitelist: Apply on Discord
+  discord: https://discord.gg/your-invite
+  # Paste the address of your hosted web map to embed it on the Map page.
+  # Leave empty to show setup instructions instead.
+  map_url: ""
+
+# ─── Build settings (you rarely need to change these) ────────
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+permalink: /news/:title/
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+collections:
+  lore:
+    output: true
+    permalink: /lore/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: lore
+    values:
+      layout: lore
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules

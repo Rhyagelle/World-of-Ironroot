@@ -1,0 +1,49 @@
+# One entry per mod. Sample data: replace with your own list.
+#
+#   name:        shown as the entry title
+#   category:    groups the entries and creates the filter buttons
+#   side:        Server, Client or Both
+#   required:    true if players must install it to join
+#   description: one or two sentences, written for players
+#   url:         optional link (usually the mod's page on mods.vintagestory.at)
+
+- name: Carry On
+  category: Quality of life
+  side: Both
+  required: true
+  description: Pick up and carry chests, barrels and other blocks without emptying them first.
+  url: https://mods.vintagestory.at/
+
+- name: XSkills
+  category: Progression
+  side: Both
+  required: true
+  description: Adds a skill system. Mining, smithing, farming and more level up as you use them.
+  url: https://mods.vintagestory.at/
+
+- name: Expanded Foods
+  category: Survival
+  side: Both
+  required: false
+  description: Adds new crops, recipes and meals so a long winter has something to look forward to.
+  url: https://mods.vintagestory.at/
+
+- name: Primitive Survival
+  category: Survival
+  side: Both
+  required: false
+  description: Early-game traps, snares and improvised tools for the first days before you have metal.
+  url: https://mods.vintagestory.at/
+
+- name: Medieval Expansion
+  category: Building
+  side: Both
+  required: false
+  description: A large set of extra building blocks and decorations for settlements.
+  url: https://mods.vintagestory.at/
+
+- name: Server utilities
+  category: Server
+  side: Server
+  required: false
+  description: Admin tools running in the background. Nothing to install on your side.

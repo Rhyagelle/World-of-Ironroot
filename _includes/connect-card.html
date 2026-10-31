@@ -1,0 +1,15 @@
+{% assign required_mods = site.data.mods | where: "required", true %}
+<aside class="plate" aria-label="How to connect">
+  <p class="plate__label">Server address</p>
+  <p class="plate__address" id="server-address">{{ site.server.address }}</p>
+  <button class="btn btn--block" type="button" data-copy="{{ site.server.address }}">
+    <span class="copy-label" aria-live="polite">Copy address</span>
+  </button>
+
+  <dl class="plate__facts">
+    <div><dt>Game version</dt><dd>{{ site.server.version }}</dd></div>
+    <div><dt>Mode</dt><dd>{{ site.server.mode }}</dd></div>
+    <div><dt>Whitelist</dt><dd>{{ site.server.whitelist }}</dd></div>
+    <div><dt>Required mods</dt><dd>{{ required_mods | size }}</dd></div>
+  </dl>
+</aside>

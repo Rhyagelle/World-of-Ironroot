@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%- capture page_desc -%}{{ page.summary | default: page.description | default: page.excerpt | default: site.description }}{%- endcapture -%}
+<title>{% unless page.url == "/" %}{{ page.title | escape }} | {% endunless %}{{ site.title | escape }}</title>
+<meta name="description" content="{{ page_desc | strip_html | strip_newlines | truncate: 170 | escape }}">
+<meta property="og:site_name" content="{{ site.title | escape }}">
+<meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+<meta property="og:description" content="{{ page_desc | strip_html | strip_newlines | truncate: 170 | escape }}">
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+<meta name="theme-color" content="#11130f">
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
+{% feed_meta %}
+
+{%- comment -%} Set the theme before first paint to avoid a flash. {%- endcomment -%}
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+
+{% if site.google_fonts %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;600&family=Zilla+Slab:wght@500;700&display=swap">
+{% endif %}
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">

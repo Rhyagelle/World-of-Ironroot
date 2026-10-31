@@ -1,0 +1,28 @@
+---
+layout: default
+title: Lore
+summary: The history of Hollowmere, told in chapters.
+---
+{% assign chapters = site.lore | sort: "order" %}
+<div class="page container">
+  <header class="page__head">
+    <h1>Lore</h1>
+    <p class="lede">How the reaches fell quiet, and why people came back. Read in order, or jump to what interests you.</p>
+  </header>
+
+  {% if chapters.size > 0 %}
+  <ol class="entry-list">
+    {% for c in chapters %}
+    <li class="entry entry--chapter">
+      <span class="entry__num" aria-hidden="true">{{ forloop.index }}</span>
+      <div>
+        <h2 class="entry__title"><a class="entry__link" href="{{ c.url | relative_url }}">{{ c.title }}</a></h2>
+        {% if c.summary %}<p class="entry__desc">{{ c.summary }}</p>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+  {% else %}
+  <p class="empty">No chapters yet. Add a Markdown file to the <code>_lore</code> folder to publish the first one.</p>
+  {% endif %}
+</div>

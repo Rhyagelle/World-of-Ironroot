@@ -1,0 +1,28 @@
+---
+layout: default
+title: News
+permalink: /news/
+summary: Server announcements, updates and events.
+---
+<div class="page container">
+  <header class="page__head">
+    <h1>News</h1>
+    <p class="lede">Announcements, wipes, updates and events. Subscribe with the <a href="{{ '/feed.xml' | relative_url }}">news feed</a>.</p>
+  </header>
+
+  {% if site.posts.size > 0 %}
+  <ul class="entry-list">
+    {% for post in site.posts %}
+    <li class="entry">
+      <div>
+        <h2 class="entry__title"><a class="entry__link" href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <p class="entry__desc">{{ post.excerpt | strip_html | strip_newlines | truncate: 170 }}</p>
+      </div>
+      <time class="entry__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="empty">No news yet. Add a file named <code>YYYY-MM-DD-title.md</code> to the <code>_posts</code> folder to publish the first post.</p>
+  {% endif %}
+</div>
