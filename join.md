@@ -14,4 +14,3 @@ lede: Five steps from a fresh install to your first night in Hollowmere.
 ## Something not working?
 
 > If the game refuses to connect, the most common cause is a version mismatch or a missing required mod. Check both against this site, then ask for help on Discord.
-{: .callout .warn}
